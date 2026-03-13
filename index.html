@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Lounge Scene - A-Frame</title>
+  <script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+</head>
+<body>
+  <a-scene>
+
+    <!-- SKY -->
+    <a-sky color="#1A237E"></a-sky>
+
+    <!-- LIGHTING -->
+    <a-light type="ambient" color="#ffffff" intensity="0.6"></a-light>
+    <a-light type="directional" color="#FFE0B2" intensity="1.0" position="3 6 2"></a-light>
+
+    <!-- FLOOR (rich dark brown oak) -->
+    <a-plane position="0 0 -4" rotation="-90 0 0" width="10" height="10" color="#111111"></a-plane>
+
+    <!-- RUG under table (army green) -->
+    <a-plane position="0 0.01 -3" rotation="-90 0 0" width="3.5" height="3.0" color="#6B3A2A" material="color:#6B3A2A; roughness:0.9; side:double"></a-plane>
+
+    <!-- WALLS -->
+    <!-- Back wall: army green -->
+    <a-box position="0 2.5 -9"   width="10"  height="5" depth="0.1" color="#4B5320"></a-box>
+    <!-- Side walls: ashy grey-green -->
+    <a-box position="-5 2.5 -4"  width="0.1" height="5" depth="10"  color="#7D8471"></a-box>
+    <a-box position=" 5 2.5 -4"  width="0.1" height="5" depth="10"  color="#7D8471"></a-box>
+
+    <!-- DOOR (right wall, near front) -->
+    <!-- Door panel -->
+    <a-box position="4.97 1.05 -1.5" width="0.05" height="2.1" depth="0.9" color="#6D4C2A"></a-box>
+    <!-- Frame: left post, right post, top beam -->
+    <a-box position="4.97 1.05 -1.02" width="0.07" height="2.22" depth="0.1" color="#3E2723"></a-box>
+    <a-box position="4.97 1.05 -1.98" width="0.07" height="2.22" depth="0.1" color="#3E2723"></a-box>
+    <a-box position="4.97 2.16  -1.5" width="0.07" height="0.1"  depth="1.1" color="#3E2723"></a-box>
+    <!-- Door knob (gold) -->
+    <a-sphere position="4.93 1.05 -1.25" radius="0.045" color="#F9A825"></a-sphere>
+    <!-- Small window on door -->
+    <a-box position="4.94 1.55 -1.5" width="0.03" height="0.35" depth="0.45" color="#85C1E9" material="opacity:0.55; transparent:true"></a-box>
+
+    <!-- CEILING (warm cream) -->
+    <a-plane position="0 5 -4" rotation="90 0 0" width="10" height="10" color="#FFF8E1"></a-plane>
+
+    <!-- CURTAIN ROD -->
+    <a-box position="-1.5 4.05 -8.9" width="2.4" height="0.06" depth="0.06" color="#5D4037"></a-box>
+    <!-- Left curtain (yellow) -->
+    <a-box position="-2.4 2.8 -8.9" width="0.32" height="2.5" depth="0.05" color="#F9A825"></a-box>
+    <!-- Right curtain (yellow) -->
+    <a-box position="-0.6 2.8 -8.9" width="0.32" height="2.5" depth="0.05" color="#F9A825"></a-box>
+
+    <!-- WINDOW glass -->
+    <a-box position="-1.5 2.8 -8.94" width="1.5" height="1.3" depth="0.04" color="#85C1E9" material="opacity:0.6; transparent:true"></a-box>
+    <!-- Window frame: BROWN -->
+    <a-box position="-1.5 2.19 -8.91" width="1.62" height="0.08" depth="0.1" color="#3E2723"></a-box>
+    <a-box position="-1.5 3.41 -8.91" width="1.62" height="0.08" depth="0.1" color="#3E2723"></a-box>
+    <a-box position="-2.27 2.8  -8.91" width="0.08" height="1.3"  depth="0.1" color="#3E2723"></a-box>
+    <a-box position="-0.73 2.8  -8.91" width="0.08" height="1.3"  depth="0.1" color="#3E2723"></a-box>
+    <!-- Cross bars: BROWN -->
+    <a-box position="-1.5 2.8 -8.92" width="1.5"  height="0.05" depth="0.07" color="#3E2723"></a-box>
+    <a-box position="-1.5 2.8 -8.92" width="0.05" height="1.3"  depth="0.07" color="#3E2723"></a-box>
+
+    <!-- WALL CLOCK (back wall) -->
+    <a-cylinder position="2.0 2.9 -8.93" radius="0.23" height="0.04" color="#FFF8E1" rotation="0 0 0"></a-cylinder>
+    <a-cylinder position="2.0 2.9 -8.91" radius="0.21" height="0.02" color="#4A3426"></a-cylinder>
+    <a-box position="2.0 2.93 -8.88" width="0.022" height="0.16" depth="0.02" color="#F44336" rotation="0 0 20"></a-box>
+    <a-box position="2.0 2.91 -8.88" width="0.016" height="0.12" depth="0.02" color="#FFF8E1" rotation="0 0 -70"></a-box>
+
+    <!-- PICTURE FRAME (back wall right) -->
+    <a-box position="3.5 2.8 -8.94" width="0.85" height="0.65" depth="0.05" color="#F9A825"></a-box>
+    <a-box position="3.5 2.8 -8.92" width="0.72" height="0.52" depth="0.03" color="#00695C"></a-box>
+
+    <!-- BOOKSHELF (left wall) -->
+    <!-- Main unit -->
+    <a-box position="-4.87 1.5 -7.0" width="0.14" height="3.0" depth="1.6" color="#3E2723"></a-box>
+    <!-- 4 shelves -->
+    <a-box position="-4.80 0.50 -7.0" width="0.05" height="0.05" depth="1.52" color="#5D4037"></a-box>
+    <a-box position="-4.80 1.20 -7.0" width="0.05" height="0.05" depth="1.52" color="#5D4037"></a-box>
+    <a-box position="-4.80 1.90 -7.0" width="0.05" height="0.05" depth="1.52" color="#5D4037"></a-box>
+    <a-box position="-4.80 2.60 -7.0" width="0.05" height="0.05" depth="1.52" color="#5D4037"></a-box>
+    <!-- Books row 1 -->
+    <a-box position="-4.76 0.82 -6.40" width="0.04" height="0.58" depth="0.11" color="#E53935"></a-box>
+    <a-box position="-4.76 0.80 -6.55" width="0.04" height="0.54" depth="0.11" color="#1565C0"></a-box>
+    <a-box position="-4.76 0.83 -6.70" width="0.04" height="0.60" depth="0.11" color="#2E7D32"></a-box>
+    <a-box position="-4.76 0.79 -6.85" width="0.04" height="0.52" depth="0.11" color="#F9A825"></a-box>
+    <a-box position="-4.76 0.82 -7.00" width="0.04" height="0.58" depth="0.11" color="#4A3426"></a-box>
+    <a-box position="-4.76 0.84 -7.15" width="0.04" height="0.62" depth="0.11" color="#E53935"></a-box>
+    <a-box position="-4.76 0.80 -7.30" width="0.04" height="0.54" depth="0.11" color="#00695C"></a-box>
+    <a-box position="-4.76 0.83 -7.45" width="0.04" height="0.60" depth="0.11" color="#1565C0"></a-box>
+    <!-- Books row 2 -->
+    <a-box position="-4.76 1.52 -6.40" width="0.04" height="0.60" depth="0.11" color="#F9A825"></a-box>
+    <a-box position="-4.76 1.50 -6.55" width="0.04" height="0.54" depth="0.11" color="#4A3426"></a-box>
+    <a-box position="-4.76 1.53 -6.70" width="0.04" height="0.60" depth="0.11" color="#E53935"></a-box>
+    <a-box position="-4.76 1.51 -6.85" width="0.04" height="0.56" depth="0.11" color="#1565C0"></a-box>
+    <a-box position="-4.76 1.54 -7.00" width="0.04" height="0.62" depth="0.11" color="#2E7D32"></a-box>
+    <a-box position="-4.76 1.52 -7.15" width="0.04" height="0.58" depth="0.11" color="#00695C"></a-box>
+    <!-- Books row 3 -->
+    <a-box position="-4.76 2.22 -6.50" width="0.04" height="0.58" depth="0.11" color="#1565C0"></a-box>
+    <a-box position="-4.76 2.20 -6.65" width="0.04" height="0.54" depth="0.11" color="#F9A825"></a-box>
+    <a-box position="-4.76 2.23 -6.80" width="0.04" height="0.60" depth="0.11" color="#4A3426"></a-box>
+    <a-box position="-4.76 2.21 -6.95" width="0.04" height="0.56" depth="0.11" color="#2E7D32"></a-box>
+    <a-box position="-4.76 2.24 -7.10" width="0.04" height="0.62" depth="0.11" color="#E53935"></a-box>
+
+    <!-- BOOKSHELF 2 (left wall, beside first) -->
+    <a-box position="-4.87 1.5 -5.0" width="0.14" height="3.0" depth="1.6" color="#3E2723"></a-box>
+    <a-box position="-4.80 0.50 -5.0" width="0.05" height="0.05" depth="1.52" color="#5D4037"></a-box>
+    <a-box position="-4.80 1.20 -5.0" width="0.05" height="0.05" depth="1.52" color="#5D4037"></a-box>
+    <a-box position="-4.80 1.90 -5.0" width="0.05" height="0.05" depth="1.52" color="#5D4037"></a-box>
+    <a-box position="-4.80 2.60 -5.0" width="0.05" height="0.05" depth="1.52" color="#5D4037"></a-box>
+    <!-- Books row 1 -->
+    <a-box position="-4.76 0.82 -4.40" width="0.04" height="0.58" depth="0.11" color="#F9A825"></a-box>
+    <a-box position="-4.76 0.80 -4.55" width="0.04" height="0.54" depth="0.11" color="#E53935"></a-box>
+    <a-box position="-4.76 0.83 -4.70" width="0.04" height="0.60" depth="0.11" color="#1565C0"></a-box>
+    <a-box position="-4.76 0.79 -4.85" width="0.04" height="0.52" depth="0.11" color="#2E7D32"></a-box>
+    <a-box position="-4.76 0.82 -5.00" width="0.04" height="0.58" depth="0.11" color="#E53935"></a-box>
+    <a-box position="-4.76 0.84 -5.15" width="0.04" height="0.62" depth="0.11" color="#4A3426"></a-box>
+    <a-box position="-4.76 0.80 -5.30" width="0.04" height="0.54" depth="0.11" color="#F9A825"></a-box>
+    <a-box position="-4.76 0.83 -5.45" width="0.04" height="0.60" depth="0.11" color="#00695C"></a-box>
+    <!-- Books row 2 -->
+    <a-box position="-4.76 1.52 -4.40" width="0.04" height="0.58" depth="0.11" color="#1565C0"></a-box>
+    <a-box position="-4.76 1.50 -4.55" width="0.04" height="0.54" depth="0.11" color="#E53935"></a-box>
+    <a-box position="-4.76 1.53 -4.70" width="0.04" height="0.60" depth="0.11" color="#F9A825"></a-box>
+    <a-box position="-4.76 1.51 -4.85" width="0.04" height="0.56" depth="0.11" color="#2E7D32"></a-box>
+    <a-box position="-4.76 1.54 -5.00" width="0.04" height="0.62" depth="0.11" color="#4A3426"></a-box>
+    <a-box position="-4.76 1.52 -5.15" width="0.04" height="0.58" depth="0.11" color="#00695C"></a-box>
+    <!-- Books row 3 -->
+    <a-box position="-4.76 2.22 -4.50" width="0.04" height="0.58" depth="0.11" color="#E53935"></a-box>
+    <a-box position="-4.76 2.20 -4.65" width="0.04" height="0.54" depth="0.11" color="#1565C0"></a-box>
+    <a-box position="-4.76 2.23 -4.80" width="0.04" height="0.60" depth="0.11" color="#F9A825"></a-box>
+    <a-box position="-4.76 2.21 -4.95" width="0.04" height="0.56" depth="0.11" color="#2E7D32"></a-box>
+    <a-box position="-4.76 2.24 -5.10" width="0.04" height="0.62" depth="0.11" color="#4A3426"></a-box>
+
+    <!-- PLANT 1 — back left corner -->
+    <a-cylinder position="-4.1 0.22 -8.2" radius="0.2"  height="0.4"  color="#BF360C"></a-cylinder>
+    <a-cylinder position="-4.1 0.42 -8.2" radius="0.19" height="0.03" color="#3E2723"></a-cylinder>
+    <a-sphere   position="-4.1 0.83 -8.2"   radius="0.42" color="#2E7D32" material="roughness:1"></a-sphere>
+    <a-sphere   position="-4.4 0.63 -8.35"  radius="0.26" color="#388E3C" material="roughness:1"></a-sphere>
+    <a-sphere   position="-3.8 0.63 -8.05"  radius="0.26" color="#1B5E20" material="roughness:1"></a-sphere>
+    <a-sphere   position="-4.1 1.06 -8.4"   radius="0.20" color="#43A047" material="roughness:1"></a-sphere>
+
+    <!-- PLANT 2 — back right corner -->
+    <a-cylinder position="4.1 0.22 -8.2" radius="0.18" height="0.38" color="#E65100"></a-cylinder>
+    <a-cylinder position="4.1 0.41 -8.2" radius="0.17" height="0.03" color="#3E2723"></a-cylinder>
+    <a-sphere   position="4.1 0.80 -8.2"  radius="0.38" color="#1B5E20" material="roughness:1"></a-sphere>
+    <a-sphere   position="4.4 0.62 -8.1"  radius="0.23" color="#2E7D32" material="roughness:1"></a-sphere>
+    <a-sphere   position="3.8 0.62 -8.3"  radius="0.23" color="#43A047" material="roughness:1"></a-sphere>
+
+    <!-- ===================== TABLE ===================== -->
+    <!-- Round tabletop -->
+    <a-cylinder position="0 0.79 -3" radius="1.2" height="0.08" color="#6B4A30" material="roughness:0.45"></a-cylinder>
+    <!-- Central pedestal -->
+    <a-cylinder position="0 0.375 -3" radius="0.07" height="0.75" color="#D4B896"></a-cylinder>
+    <!-- Wide base foot -->
+    <a-cylinder position="0 0.03 -3" radius="0.32" height="0.06" color="#D4B896"></a-cylinder>
+
+    <!-- ===================== CHAIR 1 — FRONT ===================== -->
+    <a-box position="0 0.45 -1.78"  width="0.52" height="0.06" depth="0.52" color="#4A3426"></a-box>
+    <a-box position="0 0.495 -1.78" width="0.44" height="0.04" depth="0.44" color="#5C4033"></a-box>
+    <a-box position="0 0.77 -1.505" width="0.46" height="0.58" depth="0.05" color="#4A3426"></a-box>
+    <a-box position="-0.21 0.225 -1.57" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position=" 0.21 0.225 -1.57" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position="-0.21 0.225 -1.99" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position=" 0.21 0.225 -1.99" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+
+    <!-- ===================== CHAIR 2 — BACK ===================== -->
+    <a-box position="0 0.45 -4.22"   width="0.52" height="0.06" depth="0.52" color="#4A3426"></a-box>
+    <a-box position="0 0.495 -4.22"  width="0.44" height="0.04" depth="0.44" color="#5C4033"></a-box>
+    <a-box position="0 0.77 -4.495"  width="0.46" height="0.58" depth="0.05" color="#4A3426"></a-box>
+    <a-box position="-0.21 0.225 -4.00" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position=" 0.21 0.225 -4.00" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position="-0.21 0.225 -4.44" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position=" 0.21 0.225 -4.44" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+
+    <!-- ===================== CHAIR 3 — LEFT ===================== -->
+    <a-box position="-1.35 0.45 -3"   width="0.52" height="0.06" depth="0.52" color="#4A3426"></a-box>
+    <a-box position="-1.35 0.495 -3"  width="0.44" height="0.04" depth="0.44" color="#5C4033"></a-box>
+    <a-box position="-1.625 0.77 -3"  width="0.05" height="0.58" depth="0.46" color="#4A3426"></a-box>
+    <a-box position="-1.14 0.225 -2.79" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position="-1.14 0.225 -3.21" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position="-1.56 0.225 -2.79" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position="-1.56 0.225 -3.21" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+
+    <!-- ===================== CHAIR 4 — RIGHT ===================== -->
+    <a-box position="1.35 0.45 -3"   width="0.52" height="0.06" depth="0.52" color="#4A3426"></a-box>
+    <a-box position="1.35 0.495 -3"  width="0.44" height="0.04" depth="0.44" color="#5C4033"></a-box>
+    <a-box position="1.625 0.77 -3"  width="0.05" height="0.58" depth="0.46" color="#4A3426"></a-box>
+    <a-box position="1.14 0.225 -2.79" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position="1.14 0.225 -3.21" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position="1.56 0.225 -2.79" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+    <a-box position="1.56 0.225 -3.21" width="0.05" height="0.45" depth="0.05" color="#3A2518"></a-box>
+
+    <!-- ===================== MILO TIN (green) ===================== -->
+    <!-- Body -->
+    <a-cylinder position="-0.38 0.995 -2.9" radius="0.10" height="0.33" color="#1B5E20"></a-cylinder>
+    <!-- Label band -->
+    <a-cylinder position="-0.38 0.985 -2.9" radius="0.102" height="0.20" color="#43A047"></a-cylinder>
+    <!-- Lid -->
+    <a-cylinder position="-0.38 1.175 -2.9" radius="0.106" height="0.025" color="#2E7D32"></a-cylinder>
+    <!-- Bottom rim -->
+    <a-cylinder position="-0.38 0.835 -2.9" radius="0.106" height="0.018" color="#2E7D32"></a-cylinder>
+
+    <!-- ===================== MILK TIN (red + gold label) ===================== -->
+    <!-- Body -->
+    <a-cylinder position="0.38 0.985 -2.9" radius="0.10" height="0.31" color="#B71C1C"></a-cylinder>
+    <!-- Label band -->
+    <a-cylinder position="0.38 0.975 -2.9" radius="0.102" height="0.18" color="#F9A825"></a-cylinder>
+    <!-- Lid -->
+    <a-cylinder position="0.38 1.155 -2.9" radius="0.106" height="0.025" color="#9E9E9E"></a-cylinder>
+    <!-- Bottom rim -->
+    <a-cylinder position="0.38 0.835 -2.9" radius="0.106" height="0.018" color="#9E9E9E"></a-cylinder>
+
+    <!-- ===================== CUP 1 (coral + gold saucer) ===================== -->
+    <!-- Saucer -->
+    <a-cylinder position="-0.5 0.839 -3.2" radius="0.115" height="0.018" color="#F9A825"></a-cylinder>
+    <!-- Cup: cone wider at top -->
+    <a-cone position="-0.5 0.943 -3.2" radius-bottom="0.052" radius-top="0.078" height="0.19" open-ended="false" color="#E64A19"></a-cone>
+
+    <!-- ===================== CUP 2 (blue + gold saucer) ===================== -->
+    <!-- Saucer -->
+    <a-cylinder position="0.5 0.839 -3.2" radius="0.115" height="0.018" color="#F9A825"></a-cylinder>
+    <!-- Cup: cone wider at top -->
+    <a-cone position="0.5 0.943 -3.2" radius-bottom="0.052" radius-top="0.078" height="0.19" open-ended="false" color="#1565C0"></a-cone>
+
+    <!-- SPOON -->
+    <a-box position="0 0.833 -3.35" width="0.012" height="0.004" depth="0.22" color="#B0BEC5"></a-box>
+
+    <!-- PLATE with biscuits -->
+    <a-cylinder position="0 0.836 -2.75" radius="0.12" height="0.015" color="#F9A825"></a-cylinder>
+    <a-cylinder position="-0.04 0.845 -2.72" radius="0.032" height="0.012" color="#8D6E63"></a-cylinder>
+    <a-cylinder position=" 0.06 0.845 -2.75" radius="0.032" height="0.012" color="#8D6E63"></a-cylinder>
+    <a-cylinder position="-0.02 0.845 -2.78" radius="0.032" height="0.012" color="#8D6E63"></a-cylinder>
+
+    <!-- ===================== CHANDELIER ===================== -->
+    <!-- Ceiling rod -->
+    <a-cylinder position="0 4.9 -3" radius="0.035" height="0.22" color="#F9A825"></a-cylinder>
+    <!-- Ring -->
+    <a-torus position="0 4.7 -3" radius="0.38" tube="0.025" color="#F9A825" rotation="90 0 0"></a-torus>
+    <!-- 4 glowing bulbs -->
+    <a-sphere position=" 0.38 4.62 -3.00" radius="0.07" color="#FFFDE7" material="emissive:#FFEE58; emissiveIntensity:1.2"></a-sphere>
+    <a-sphere position="-0.38 4.62 -3.00" radius="0.07" color="#FFFDE7" material="emissive:#FFEE58; emissiveIntensity:1.2"></a-sphere>
+    <a-sphere position=" 0.00 4.62 -2.62" radius="0.07" color="#FFFDE7" material="emissive:#FFEE58; emissiveIntensity:1.2"></a-sphere>
+    <a-sphere position=" 0.00 4.62 -3.38" radius="0.07" color="#FFFDE7" material="emissive:#FFEE58; emissiveIntensity:1.2"></a-sphere>
+    <a-light type="point" color="#FFF8E1" intensity="1.5" position="0 4.6 -3"></a-light>
+
+    <!-- ===================== CAMERA ===================== -->
+    <a-camera position="0 1.6 1.2" look-controls wasd-controls></a-camera>
+
+  </a-scene>
+</body>
+</html>
